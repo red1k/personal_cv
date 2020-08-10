@@ -207,5 +207,15 @@ function(input, output, session) {
                 axis.title.y = element_blank(),
             )
     })
+
+    output$cv <- downloadHandler(
+        filename <- function() {
+            paste("Erdenebayar Sh - CV", "pdf", sep = ".")
+        },
+        content <- function(file) {
+            file.copy("CV.pdf", file)
+        },
+        contentType = "application/pdf"
+    )
         
 }

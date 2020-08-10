@@ -39,6 +39,7 @@ tab_info <- tabItem(
 				)
 			),
 			h2(),
+			downloadButton('cv', 'Download my CV', class = 'btn-block')
 		),
 		column(
 			width = 4,
